@@ -1,3 +1,0 @@
-# bloxorz
-
-Stuff
