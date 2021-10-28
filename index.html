@@ -2,6 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="theme-color" content="#E77E7E">
+<meta property="og:type" content="website" />
+<meta property="og:see_also" content="https://ubg100.github.io/" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+<link rel="canonical" href="https://ubg100.github.io/retro-bowl" />
+<meta property="og:url" content="https://ubg100.github.io/retro-bowl" />
+<meta property="og:title" content="Retro Bowl" />	<meta name="twitter:title" content="Retro Bowl" />
+<title>Miami Shark</title>
+<meta property="og:description" content="Play all your favorite games unblocked now!" />
+<meta name="twitter:description" content="Play all your favorite games unblocked now!" />
+<meta property="og:image" content="https://ubg100.github.io/ubg100.png">
 <script data-ad-client="ca-pub-5287266392597979" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script type="text/javascript"> 
 function disableselect(e){  
@@ -31,26 +43,29 @@ document.onclick=reEnable
   gtag('config', 'UA-159383230-1');
 </script>
 <meta charset="UTF-8">
-<script data-ad-client="ca-pub-5287266392597979" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<meta name="theme-color" content="#E77E7E">
-<meta property="og:type" content="website" />
-<meta property="og:see_also" content="https://ubg100.github.io/" />
-<meta property="og:locale" content="en_US" />
-<meta name="twitter:card" content="summary" />
-<link rel="canonical" href="https://ubg100.github.io/color-on" />
-<meta property="og:url" content="https://ubg100.github.io/color-on" />
-<title>Color On</title>
-<meta property="og:title" content="Color On" />	<meta name="twitter:title" content="Color On" />
-<meta property="og:description" content="Play all your favorite games unblocked now!" />
-<meta name="twitter:description" content="Play all your favorite games unblocked now!" />
-<meta property="og:image" content="https://ubg100.github.io/ubg100.png">
+<link rel="shortcut icon" type="image/x-icon" href="ubg100.png"/>
+<link rel="mask-icon" type="" href="ubg100.png" color="#111"/>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+	(function() {
+	  var externallyFramed = false;
+	  try {
+		externallyFramed = top.location.host != location.host;
+	  }
+	  catch(err) {
+		externallyFramed = true;
+	  }
+	  if(externallyFramed) {
+		var ancss = document.getElementById("ancss");
+		ancss.parentNode.removeChild(ancss);
+	  }
+	})();
+  </script>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Fredoka One:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 body{
-	font-family: 'Fredoka One', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
@@ -70,7 +85,50 @@ a:hover {
 /* #Cursor
 ================================================== */
 
+.cursor,
+.cursor2,
+.cursor3{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%;
+	mix-blend-mode: difference;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.cursor{
+	background-color: #fff;
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2,.cursor3{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none
+}
+.cursor2{
+	border: 2px solid #fff;
+	box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+.cursor2.hover{
+	background: rgba(255,255,255,1);
+	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
 
+@media screen and (max-width: 1200px){
+	.cursor,.cursor2,.cursor3{
+		display: none
 	}
 }
 
@@ -113,7 +171,7 @@ a:hover {
 }
 .logo-wrap a {
 	cursor: pointer;
-	font-family: 'Fredoka One', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 900;
 	font-size: 20px;
 	line-height: 20px;
@@ -387,13 +445,13 @@ body.nav-active .nav__list-item:nth-child(10) {
 .content {
     position: relative;
 	margin: auto;
-	width: 880px;
+	width: 965px;
 	display: block;
 	overflow: hidden;
-	height: 600px;
-	border-radius: 45px;
+	height: 550px;
+	border-radius: 25px;
   	border: 5px solid #E77E7E;
-	top: 50px;
+	top: 100px;
 }
 /* #back to top stuff
 ================================================== */
@@ -542,13 +600,12 @@ body{
 	position:relative;
 	top:1px;
 }
-.fsbutton {
-	text-align: center;
-	margin-right: 860px;
+.fsbutton{
+	height: 100px;
 }
 .titletext{
 	font-family: Montserrat, sans-serif;
-    margin-right: 380px;
+    margin-right: 320px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -608,7 +665,7 @@ i.material-icons {
   z-index: 2;
   display: none;
   overflow: hidden;
-  width: 1012px;
+  width: 960px;
   font-size: 17px;
   line-height: 25px;
   padding: 25px;
@@ -649,11 +706,11 @@ p.desc{
 </head>
 <body oncontextmenu="return false;" id="ancss">
 <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <header class="cd-header">
 <div class="header-wrapper">
 <div class="logo-wrap">
-<a href="https://ubg100.github.io/" class="hover-target"><span>UBG</span>100</a>
-<a href="https://ubg100.github.io/" class="hover-target"><img id="myImage" src="ubg100.png"></a>
+<a href="" class="hover-target"><span>Miami</span> Shark</a>
 </div>
 <div class="nav-but-wrap">
 <div class="menu-icon hover-target">
@@ -682,39 +739,25 @@ p.desc{
 </div>
 	<div class="test">
 <section class="content">
-<center><iframe src="https://pogpugs.github.io/chilibowlflash/bloxorz.html" width="850" height="600" frameborder="0" allowfullscreen></iframe></center>
-
+<iframe class="frame" allowfullscreen src="https://pogpugs.github.io/Flash-Games/miamishark.html" width="960" height="540" scrolling="no"></iframe>
 	  </section>
 	  <div class = "fsbutton">
-		<a class="myButton" onclick="goFullscreen()"><i class="material-icons tabz">crop_free</i>Fullscreen</a>
-	  <script>
-		  var elem = document.getElementsByTagName("iframe")[0];
-		  function goFullscreen() {
-		  if (elem.requestFullscreen) {
-		  elem.requestFullscreen();
-		  } else if (elem.mozRequestFullScreen) {
-		  elem.mozRequestFullScreen();
-		  } else if (elem.webkitRequestFullscreen) {
-		  elem.webkitRequestFullscreen();
-		  } else if (elem.msRequestFullscreen) {
-		  elem.msRequestFullscreen();
-		  }
-		  }
-	  </script></div>
+	</div>
 	  <div class="titletext">
 		  <ul class="tabs" role="tablist">
 		  <li>
 			  <input type="radio" name="tabs" id="tab1" checked />
 			  <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"><i class="material-icons tabz">article</i>Description</label>
 			  <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="description" aria-hidden="false">
-			  <p class="desc">COLORON is a fun and well-designed platformer. The goal is to match the color of the tower to the bouncing ball. Keep it going for as long as you can, just don't get mad.</p>
+			  <p class="desc">
+				Take a wild ride through the action packed daily routine of a Miami Shark, the destruction and mayhem is bound to rip your face off right through the screen. Intense shark-tion includes intense explosions, mass genocide of innocents and adrenaline pumping insanity. Warning: game will blow up your monitor. </p>
 			  </div>
 		  </li>
 		  <li>
 			  <input type="radio" name="tabs" id="tab2" />
 			  <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0"><i class="material-icons tabz">keyboard</i>Controls</label>
 			  <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-			  <p class="desc">Click the bars to match the color with the bouncing ball.</p>
+			  <p class="desc">WASD and Arrows, A to bite.</p>
 			  </div>
 		  </li>
 		  <li>
@@ -724,11 +767,12 @@ p.desc{
 		  </ul>
 	  </div>
 	  <div class="test">
+		<br>
         <br>
         <br>
         <br>
         <br>
-        <br>
+	  </div>
       <div align="center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- Horizontal Ads -->
       <ins class="adsbygoogle"
@@ -740,7 +784,6 @@ p.desc{
       <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
       </script></div></div>
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-9bf952ccbbd13c245169a0a1190323a27ce073a3d304b8c0fdf421ab22794a58.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script id="rendered-js">
 (function ($) {"use strict";
@@ -847,7 +890,15 @@ p.desc{
 //# sourceURL=pen.js
 		</script>
 		<script>
-
+			(function() {
+			  var externallyFramed = false;
+			  try {
+				externallyFramed = top.location.host != location.host;
+			  }
+			  catch(err) {
+				externallyFramed = true;
+			  }
+			  if(externallyFramed) {
 				var ancss = document.getElementById("ancss");
 				ancss.parentNode.removeChild(ancss);
 			  }
@@ -865,5 +916,5 @@ p.desc{
 			href="https://statcounter.com/" target="_blank"><img class="statcounter"
 			src="https://c.statcounter.com/12471302/0/9a266461/1/" alt="Web
 			Analytics"></a></div></noscript>
-    </body>
+</body> 
 </html>
